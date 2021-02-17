@@ -1,0 +1,52 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2578
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fswiss\fcharset0 Helvetica-Oblique;\f2\fswiss\fcharset0 Helvetica-Bold;
+}
+{\colortbl;\red255\green255\blue255;\red27\green31\blue34;\red0\green0\blue0;\red255\green255\blue255;
+\red194\green126\blue101;}
+{\*\expandedcolortbl;;\cssrgb\c14118\c16078\c18039;\cssrgb\c0\c0\c0;\cssrgb\c100000\c100000\c100000;
+\cssrgb\c80784\c56863\c47059;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{decimal\}.}{\leveltext\leveltemplateid1\'02\'00.;}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{hyphen\}}{\leveltext\leveltemplateid2\'01\uc0\u8259 ;}{\levelnumbers;}\fi-360\li1440\lin1440 }{\listname ;}\listid1}
+{\list\listtemplateid2\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{hyphen\}}{\leveltext\leveltemplateid101\'01\uc0\u8259 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid2}
+{\list\listtemplateid3\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{hyphen\}}{\leveltext\leveltemplateid201\'01\uc0\u8259 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid3}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}{\listoverride\listid2\listoverridecount0\ls2}{\listoverride\listid3\listoverridecount0\ls3}}
+\margl1440\margr1440\vieww18660\viewh13140\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 In order to run our code in Python and be able to transact with our Bitcoin and Ethereum wallets, we require two instillations. Before performing them, make sure that you have activated your ethereum environment using a $ conda activate ethereum command:\
+\
+\pard\tx220\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li720\fi-720\pardirnatural\partightenfactor0
+\ls1\ilvl0\cf0 {\listtext	1.	}We will first need to install 
+\f1\i bit
+\f0\i0 . Bit Python\'92s premier Bitcoin Library and has surpassed previous iterations of Bitcoin libraries for its ease of use as well as sense of security. Have pip will allow you to interact with your Bitcoin wallet and keys while also transacting between them in a seamless fashion. In order to download bit use the following command:\
+\pard\tx940\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li1440\fi-1440\pardirnatural\partightenfactor0
+\ls1\ilvl1\cf0 {\listtext	\uc0\u8259 	}$ pip install bit\
+\pard\tx220\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li720\fi-720\pardirnatural\partightenfactor0
+\ls1\ilvl0\cf0 {\listtext	2.	}Next we will have to install 
+\f1\i web3
+\f0\i0 , which is Python\'92s library for interacting with Ethereum networks. To install web3 please use the following command:\
+\pard\tx940\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li1440\fi-1440\pardirnatural\partightenfactor0
+\ls1\ilvl1\cf0 {\listtext	\uc0\u8259 	}$ pip install web3\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \
+After installing these two dependencies to your virtual environment, we will also have to clone a copy of the \'91hd-wallet-derive\'92 tool into our project folder through the Terminal window. After \'91cd-ing\'92 into your project folder run the following command: \
+\
+\pard\tx220\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li720\fi-720\pardirnatural\partightenfactor0
+\ls2\ilvl0\cf0 {\listtext	\uc0\u8259 	}\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 git clone https://github.com/dan-da/hd-wallet-derive\
+\ls2\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8259 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 cd hd-wallet-derive\
+\ls2\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8259 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 php -r "readfile('https://getcomposer.org/installer');" | php\
+\ls2\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8259 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 php composer.phar install\cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
+{\listtext	\uc0\u8259 	}\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \
+Once the hd-wallet-derive tool has been properly cloned, you can finish out the requirements but creating a symlink called derive. This will be used later on in order to access the address, public and private keys of our Bitcoin and Ethereum wallets. To create this link run the following line of code 
+\f2\b in your terminal:\
+\
+\pard\tx220\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li720\fi-720\pardirnatural\partightenfactor0
+\ls3\ilvl0
+\f0\b0 \cf3 \cb4 {\listtext	\uc0\u8259 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec5 ln -s hd-wallet-derive/hd-wallet-derive.php derive\cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
+}
