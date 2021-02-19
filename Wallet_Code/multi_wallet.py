@@ -56,7 +56,7 @@ def create_tx (coin, account, to, amount):
             "gas": gasEstimate,
            "gasPrice": w3.eth.generateGasPrice(),
             "nonce": w3.eth.getTransactionCount(account.address),
-           "chainId": w3.net.chainId
+           #"chain_id": w3.net.chainId
         }
     elif coin == BTCTEST:
         return PrivateKeyTestnet.prepare_transaction(account.address, [(to, amount, BTC)])
@@ -92,11 +92,18 @@ key_2 = wif_to_key(coins[BTCTEST][1]['privkey'])
 print(f'From Address Balance:{key_1.get_balance("btc")}')
 print(f'To Address Balance:{key_2.get_balance("btc")}')
 
-#send_tx(BTCTEST, priv_key_to_account(BTCTEST, btc_address_from), btc_address_to, 0.0000001)
+send_tx(BTCTEST, priv_key_to_account(BTCTEST, btc_address_from), btc_address_to, 0.0000001)
 
 # Send Transaction for ETH
 
 ethereum_network_address = coins['eth'][0]['address']
-print(ethereum_network_address)
 
-#
+# Ethereum Test transaction
+
+## To and From Addresses
+eth_address_from = coins[ETH][0]['privkey']
+eth_address_to = coins[ETH][1]['address']
+print(eth_address_to)
+
+## Transaction Code
+send_tx(ETH, priv_key_to_account(ETH, eth_address_from), eth_address_to, 1000)

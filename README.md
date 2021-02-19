@@ -82,15 +82,23 @@ There are a few steps that we need to completed in order to transact using our E
 
 3) Delete the geth folders in node 1 and node 2.
 
-4) Re-initialize using `geth --datadir nodeX init networkname.json`. This will create a new chain, and will pre-fund the new account.
+4) Re-initialize using `geth --datadir nodeX init networkname.json`. This will create a new chain, and will pre-fund the new account. Please note that the X represents the name of your node folder. It, therefore, should be run twice, or for how many nodes you previously created and the name of the node should be updated.
 
 [initialize_network](Images/initialize_network.png)
 
 5) After re-initializing the network, we then need to begin the mining process in order to get the network running. 
 
-[mining_node1](Images/node_1.png)
+[mining_node1](Images/node1.png)
 
-[mining_node2](Images/node_2.png)
+[mining_node2](Images/node2.png)
+
+6) Then, through MyCrypto, you will have to send a successful transaction before sending through Python due to a bug in the network. 
+
+[test_transaction](Images/test_transaction.png)
+
+7) After sending a successful transaction through MyCrypto we are ready to do the same using our hd-wallet and Python.
+
+
 
 
 
